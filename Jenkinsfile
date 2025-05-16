@@ -1,4 +1,4 @@
-@Library('shared-lib') _   // This loads the shared library configured globally
+@Library('jenkins-shared-lib') _   // This loads the shared library configured globally
 
 pipeline {
     agent any
