@@ -2,6 +2,8 @@
 
 import org.demo.Utils
 
+def utils = new Utils(this)
+
 pipeline {
     agent any
 
@@ -12,11 +14,10 @@ pipeline {
             }
         }
 
-        stage('Use Class') {
+       stage('Class Call') {
             steps {
                 script {
-                    def utils = new Utils(this)
-                    utils.printInfo("This is a shared library class method.")
+                    utils.printInfo("Running from aliased class instance.")
                 }
             }
         }
